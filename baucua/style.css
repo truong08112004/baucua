@@ -1,0 +1,220 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #595265;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.plate {
+  position: relative;
+  
+}
+.bowl {
+  position: absolute;
+  transition: all linear 0.25s;
+  top: 13%;
+}
+.move {
+  top: -50%;
+}
+.btnwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+button {
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 0 10px;
+}
+button:nth-child(1){
+  background-color: greenyellow;
+}
+button:nth-child(2){
+  background-color: yellow;
+}
+button:nth-child(3){
+  background-color: lightblue;
+}
+.dicebox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dicetop {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.dicebot {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* /////////////////////// */
+.dice {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.dice-one {
+
+}
+
+.dice-two {
+  margin-right: 15px;
+}
+.dice-three {
+  margin-left: 15px;
+}
+
+.side {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid #e5e5e5; */
+  text-align: center;
+  line-height: 2em;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.side:nth-child(1) {
+  transform: translateZ(3.1em);
+}
+
+.side:nth-child(6) {
+  transform: rotateY(90deg) translateZ(3.1em);
+}
+
+.side:nth-child(3) {
+  transform: rotateY(-90deg) translateZ(3.1em);
+}
+
+.side:nth-child(4) {
+  transform: rotateX(90deg) translateZ(3.1em);
+}
+
+.side:nth-child(5) {
+  transform: rotateX(-90deg) translateZ(3.1em);
+}
+
+.side:nth-child(2) {
+  transform: rotateY(-180deg) translateZ(3.1em);
+}
+
+.show-1 {
+  transform: rotateX(720deg) rotateZ(-720deg);
+}
+
+.show-6 {
+  transform: rotateX(-900deg) rotateZ(1080deg);
+}
+
+.show-3 {
+  transform: rotateY(-450deg) rotateZ(-1440deg);
+}
+
+.show-4 {
+  transform: rotateY(810deg) rotateZ(720deg);
+}
+
+.show-5 {
+  transform: rotateX(-810deg) rotateZ(-1080deg);
+}
+
+.show-2 {
+  transform: rotateX(450deg) rotateZ(-720deg);
+}
+
+
+.vibrate{
+  -webkit-animation: vibrate-1 0.3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-20px, 20px);
+    transform: translate(-20px, 20px);
+  }
+  40% {
+    -webkit-transform: translate(-20px, -20px);
+    transform: translate(-20px, -20px);
+  }
+  60% {
+    -webkit-transform: translate(20px, 20px);
+    transform: translate(20px, 20px);
+  }
+  80% {
+    -webkit-transform: translate(20px, -20px);
+    transform: translate(20px, -20px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
